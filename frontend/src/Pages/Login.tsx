@@ -30,7 +30,7 @@ function Auth() {
 
                     <form className="auth-form" onSubmit={submitForm}>
                         <label><span className="field-label">Email Address <span>*</span></span><input type="email" placeholder="Enter email address" required autoComplete="email" /></label>
-                        <label><span className="field-label">Password <span>*</span></span><span className="password-field"><input type={showPassword ? 'text' : 'password'} placeholder="Enter Password" required minLength={8} /><button className="eye-button" type="button" aria-label={showPassword ? 'Hide password' : 'Show password'} onClick={() => setShowPassword(!showPassword)}><svg viewBox="0 0 24 24"><path d="M2.5 12s3.3-6 9.5-6 9.5 6 9.5 6-3.3 6-9.5 6-9.5-6-9.5-6Z" /><circle cx="12" cy="12" r="2.6" /></svg></button></span></label>
+                        <label><span className="field-label">Password <span>*</span></span><span className="password-field"><input type={showPassword ? 'text' : 'password'} placeholder="Enter Password" required minLength={8} /><button className="eye-button" type="button" aria-label={showPassword ? 'Hide password' : 'Show password'} onClick={() => setShowPassword(!showPassword)}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.3-6 9.5-6 9.5 6 9.5 6-3.3 6-9.5 6-9.5-6-9.5-6Z" /><circle cx="12" cy="12" r="2.6" />{showPassword && <path d="m4 4 16 16" className="eye-slash" />}</svg></button></span></label>
                         <button className="forgot-button" type="button">Forgot password</button>
                         <button className="submit-button" type="submit">Sign in</button>
                     </form>
